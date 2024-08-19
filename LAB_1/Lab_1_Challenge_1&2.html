@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    const markHigher = 70;
+    const markWidth = 1.69;
+
+    const johnHigher = 92;
+    const johnWidth = 1.95;
+
+    var BMI = function (mass, height) {
+      return mass / (height * height);
+    };
+
+    var johnBMI = BMI(johnHigher, johnWidth);
+    var markBMI = BMI(markHigher, markWidth);
+
+    var markHigherBMI = markBMI > johnBMI;
+    console.log("challenge 1: ", markHigherBMI);
+
+    if (markHigherBMI) {
+      console.log(
+        `Mark BMI (${markHigher}, ${markWidth}) cao hơn John (${johnHigher}, ${johnWidth})!`
+      );
+    } else {
+      console.log(
+        `John BMI (${johnHigher}, ${johnWidth}) cao hơn Mark (${markHigher}, ${markWidth})!`
+      );
+    }
+  </script>
+</html>
