@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    const Dolphins = [96, 108, 89];
+    const Koalas = [88, 91, 110];
+
+    const calcAverage = (arr) => {
+      let sum = 0;
+      for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+      }
+      return sum / arr.length;
+    };
+
+    const dolphinsAverage = calcAverage(Dolphins);
+    const koalasAverage = calcAverage(Koalas);
+
+    if (dolphinsAverage >= 100 && dolphinsAverage > koalasAverage) {
+      console.log("Dolphins win!");
+    } else if (koalasAverage >= 100 && koalasAverage > dolphinsAverage) {
+      console.log("Koalas win!");
+    } else if (
+      dolphinsAverage >= 100 &&
+      koalasAverage >= 100 &&
+      dolphinsAverage === koalasAverage
+    ) {
+      console.log("Draw!");
+    } else {
+      console.log("No one wins!");
+    }
+  </script>
+</html>
