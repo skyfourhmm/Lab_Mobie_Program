@@ -4,6 +4,7 @@ Array.prototype.myforeach = function (callback) {
   for (let i = 0; i < this.length; i++) {
     this[i] = callback(this[i]);
   }
+  console.log(this);
   return this;
 };
 
